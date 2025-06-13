@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Quelques photos du Campus</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       background-image: url("image0.jpg");
@@ -75,20 +76,43 @@
       color: #f9f9f9;
       text-shadow: 1px 1px 8px #000a;
     }
-    @media (max-width: 700px) {
+    @media (max-width: 900px) {
       main {
         padding: 15px 3vw;
+        max-width: 98vw;
       }
       .gallery {
-        gap: 10px;
+        gap: 16px;
       }
       .photo-block {
         width: 44vw;
-        min-width: 150px;
+        min-width: 160px;
         max-width: 96vw;
       }
       .image-zoom {
         height: 90px;
+      }
+    }
+    @media (max-width: 600px) {
+      main {
+        padding: 5px 1vw;
+      }
+      .gallery {
+        gap: 8px;
+      }
+      .photo-block {
+        width: 96vw;
+        min-width: 0;
+        padding: 7px 3px 13px 3px;
+      }
+      .image-zoom {
+        height: 45vw;
+        min-height: 70px;
+        max-height: 180px;
+      }
+      h1 {
+        font-size: 1.25em;
+        margin-bottom: 18px;
       }
     }
   </style>
@@ -127,11 +151,15 @@
       </div>
       <div class="photo-block">
         <img src="image9.jpg" class="image-zoom" alt="Salle serveurs" />
-        <p class="caption"> Cité Universitaire</p>
+        <p class="caption">Cité Universitaire</p>
       </div>
       <div class="photo-block">
         <img src="image8.jpg" class="image-zoom" alt="Cour d'honneur" />
         <p class="caption">Cour d'honneur</p>
+      </div>
+      <div class="photo-block">
+        <img src="image10.jpg" class="image-zoom" alt="Cours dans l'amphie" />
+        <p class="caption">Cour dans l'amphie</p>
       </div>
     </section>
   </main>
