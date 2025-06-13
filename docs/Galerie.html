@@ -1,53 +1,143 @@
 <!DOCTYPE html>
 <html lang="fr">
-<h1>Quelques photos du Campus </h1>
-<style>
-    body{
-        background-image: url("image0.jpg");
-		backgroun-repeat:no-repeat;
-background-size: cover;
-background-position:center;
-        color: white;
+<head>
+  <meta charset="UTF-8">
+  <title>Quelques photos du Campus</title>
+  <style>
+    body {
+      background-image: url("image0.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      backdrop-filter: brightness(0.7);
     }
-  .image-zoom {
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-    width: 200px; 
-    margin: 10px;
-  }
-</style>
+    main {
+      background: rgba(0,0,0,0.5);
+      border-radius: 18px;
+      margin: 40px auto;
+      max-width: 900px;
+      padding: 32px 28px 32px 28px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 36px;
+      font-size: 2.5em;
+      letter-spacing: 1.5px;
+      color: #fffa;
+      text-shadow: 2px 2px 8px #2228;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+      align-items: flex-start;
+    }
+    .photo-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 200px;
+      background: rgba(255,255,255,0.08);
+      border-radius: 16px;
+      padding: 10px 10px 18px 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+      transition: background 0.3s;
+    }
+    .photo-block:hover {
+      background: rgba(255,255,255,0.16);
+    }
+    .image-zoom {
+      border-radius: 13px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+      transition: transform 0.35s cubic-bezier(0.23,1,0.32,1), box-shadow 0.3s;
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+      margin-bottom: 8px;
+      background: #1a1a1a;
+    }
+    .photo-block:hover .image-zoom {
+      transform: scale(1.15);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.32);
+      z-index: 2;
+    }
+    .caption {
+      text-align: center;
+      font-size: 1.07em;
+      margin: 0;
+      color: #f9f9f9;
+      text-shadow: 1px 1px 8px #000a;
+    }
+    @media (max-width: 700px) {
+      main {
+        padding: 15px 3vw;
+      }
+      .gallery {
+        gap: 10px;
+      }
+      .photo-block {
+        width: 44vw;
+        min-width: 150px;
+        max-width: 96vw;
+      }
+      .image-zoom {
+        height: 90px;
+      }
+    }
+  </style>
 </head>
 <body>
-<img src="image2.jpg" class="image-zoom" alt="Image 1" />
-<p>Hall</p>
-<img src="image3.jpg" class="image-zoom" alt="Image 2" />
-<p> Laboratoire de Biologie</p>
-<img src="image4.jpg" class="image-zoom" alt="Image 3" />
-<p> Laboratoire de Biologie</p>
-<img src="image5.jpg" class="image-zoom" alt="Image " />
-<p>AmphiA1</p>
-<img src="image6.jpg" class="image-zoom" alt="Image 5" />
-<p>Salle d'informatique</p>
-<img src="image7.jpg" class="image-zoom" alt="Image 7" />
-<p> Salle de classe </p>
-<img src="image8" class="image-zoom" alt="Image 8" /><p>AmphiA2</p>
-<img src="image9.jpg" class="image-zoom" alt="Image 9" /><p>Salle serveurs</p>
-<img src="cortile-donore-cour-d-honneur-la-principale-de-l-université-milan-italie-milans-granda-complexe-346787101.webp" class="image-zoom" alt="Image 4" />
-<img src="image10.jpg" class="image-zoom" alt="Image 10" />
-
-<script>
-  const images = document.querySelectorAll('.image-zoom');
-
-  images.forEach(img => {
-    img.addEventListener('mouseenter', () => {
-      img.style.transform = 'scale(1.2)';
-    });
-    img.addEventListener('mouseleave', () => {
-      img.style.transform = 'scale(1)';
-    });
-  });
-</script>
-
+  <main>
+    <h1>Quelques photos du Campus</h1>
+    <section class="gallery">
+      <div class="photo-block">
+        <img src="image2.jpg" class="image-zoom" alt="Hall du campus" />
+        <p class="caption">Hall</p>
+      </div>
+      <div class="photo-block">
+        <img src="image3.jpg" class="image-zoom" alt="Laboratoire de Biologie 1" />
+        <p class="caption">Laboratoire de Biologie</p>
+      </div>
+      <div class="photo-block">
+        <img src="image4.jpg" class="image-zoom" alt="Laboratoire de Biologie 2" />
+        <p class="caption">Laboratoire de Biologie</p>
+      </div>
+      <div class="photo-block">
+        <img src="image5.jpg" class="image-zoom" alt="Amphi A1" />
+        <p class="caption">Amphi A1</p>
+      </div>
+      <div class="photo-block">
+        <img src="image6.jpg" class="image-zoom" alt="Salle d'informatique" />
+        <p class="caption">Salle d'informatique</p>
+      </div>
+      <div class="photo-block">
+        <img src="image7.jpg" class="image-zoom" alt="Salle de classe" />
+        <p class="caption">Salle de classe</p>
+      </div>
+      <div class="photo-block">
+        <img src="image8.jpg" class="image-zoom" alt="Amphi A2" />
+        <p class="caption">Amphi A2</p>
+      </div>
+      <div class="photo-block">
+        <img src="image9.jpg" class="image-zoom" alt="Salle serveurs" />
+        <p class="caption">Salle serveurs</p>
+      </div>
+      <div class="photo-block">
+        <img src="cortile-donore-cour-d-honneur-la-principale-de-l-université-milan-italie-milans-granda-complexe-346787101.webp" class="image-zoom" alt="Cour d'honneur" />
+        <p class="caption">Cour d'honneur</p>
+      </div>
+      <div class="photo-block">
+        <img src="image10.jpg" class="image-zoom" alt="Campus en été" />
+        <p class="caption">Vue estivale</p>
+      </div>
+    </section>
+  </main>
 </body>
 </html>
