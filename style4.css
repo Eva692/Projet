@@ -1,130 +1,74 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background: url("image0.jpg") center/cover no-repeat;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-image: url('image0.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #333; /* Couleur du texte pour qu'il soit lisible sur le fond */
 }
 
 .container {
-    background: rgba(0, 0, 0, 0.7);
-    padding: 32px 28px;
-    border-radius: 16px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-    width: 95%;
-    max-width: 500px;
+    width: 80%;
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Fond semi-transparent pour le formulaire */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 1.4em;
-    margin-bottom: 1.5em;
     text-align: center;
-    letter-spacing: 1px;
+    color: #2c3e50;
+    margin-bottom: 20px;
 }
 
 .scrollable-form {
-    max-height: 70vh;
+    max-height: 80vh;
     overflow-y: auto;
-    padding-right: 8px; /* For scrollbar space */
-}
-
-/* Scrollbar customization for modern browsers */
-.scrollable-form::-webkit-scrollbar {
-    width: 8px;
-    background: transparent;
-}
-
-.scrollable-form::-webkit-scrollbar-thumb {
-    background: #1abc9c;
-    border-radius: 8px;
-}
-
-.scrollable-form::-webkit-scrollbar-track {
-    background: rgba(0,0,0,0.18);
-    border-radius: 8px;
-}
-
-/* Firefox scrollbar */
-.scrollable-form {
-    scrollbar-width: thin;
-    scrollbar-color: #1abc9c rgba(0,0,0,0.18);
+    padding-right: 10px;
 }
 
 .form-group {
-    margin-bottom: 18px;
-    display: flex;
-    flex-direction: column;
+    margin-bottom: 15px;
 }
 
-.form-group label {
-    margin-bottom: 6px;
-    font-weight: 500;
-    letter-spacing: 0.5px;
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
 }
 
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group input[type="date"],
-.form-group input[type="tel"],
-.form-group input[type="file"],
-.form-group select {
-    padding: 9px 12px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1em;
-    background: #222c;
-    color: #fff;
-    margin-bottom: 2px;
-    outline: none;
-    transition: background 0.2s;
-}
-
-.form-group input[type="file"] {
-    color: #fff;
-    background: #282828cc;
-}
-
-.form-group input[type="text"]:focus,
-.form-group input[type="email"]:focus,
-.form-group input[type="date"]:focus,
-.form-group input[type="tel"]:focus,
-.form-group select:focus {
-    background: #333c;
-}
-
-.form-group.center {
-    text-align: center;
+input[type="text"],
+input[type="date"],
+input[type="tel"],
+input[type="email"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
 input[type="submit"] {
-    background: #1abc9c;
-    color: #fff;
-    padding: 11px 30px;
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
     border: none;
-    border-radius: 6px;
-    font-size: 1.09em;
-    font-weight: bold;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background 0.2s;
-    margin-top: 10px;
+    font-size: 16px;
 }
 
 input[type="submit"]:hover {
-    background: #159978;
+    background-color: #2980b9;
 }
 
-@media (max-width: 600px) {
-    .container {
-        padding: 16px 6px;
-    }
-    h1 {
-        font-size: 1.02em;
-    }
-    .scrollable-form {
-        max-height: 62vh;
-    }
+.center {
+    text-align: center;
 }
