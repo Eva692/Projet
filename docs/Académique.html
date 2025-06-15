@@ -4,141 +4,27 @@
     <meta charset="UTF-8">
     <title>Nos départements - ESIBF</title>
     <link rel="stylesheet" href="style6.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
         body {
+            background-image: url('image0.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             margin: 0;
-            background: #1a2233;
-            color: #fff;
-            font-family: 'Segoe UI', Arial, sans-serif;
-        }
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background: #17203a;
-            padding: 16px 32px;
-            box-shadow: 0 2px 8px #0004;
-            flex-wrap: wrap;
-        }
-        .navbar-title {
-            font-size: 1.8em;
-            font-weight: bold;
-            letter-spacing: 1.5px;
-        }
-        .navbar-links {
-            display: flex;
-            list-style: none;
             padding: 0;
-            margin: 0;
-            gap: 18px;
+            min-height: 100vh;
         }
-        .navbar-links li a {
-            color: #fff;
-            text-decoration: none;
-            padding: 7px 18px;
-            border-radius: 5px;
-            transition: background 0.2s;
-        }
-        .navbar-links li a.active,
-        .navbar-links li a:hover {
-            background: #2b3a5f;
-        }
+        
         main {
-            max-width: 900px;
-            margin: 40px auto 0 auto;
-            padding: 30px 24px 50px 24px;
-            background: rgba(0,0,0,0.22);
-            border-radius: 18px;
-            box-shadow: 0 8px 24px #0002;
+            background-color: rgba(0, 0, 0, 0.6); /* Fond semi-transparent pour améliorer la lisibilité */
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px;
         }
+        
         h1 {
-            text-align: center;
-            margin-bottom: 36px;
-            font-size: 2.2em;
-            letter-spacing: 1.5px;
-        }
-        .departments {
-            display: flex;
-            gap: 28px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        .departement {
-            background: rgba(255,255,255,0.08);
-            padding: 28px 22px;
-            border-radius: 16px;
-            min-width: 240px;
-            width: 29%;
-            box-sizing: border-box;
-            margin-bottom: 18px;
-            box-shadow: 0 2px 8px #0002;
-            transition: background 0.3s;
-        }
-        .departement h2 {
-            color: #a2d4fa;
-            margin-top: 0;
-            margin-bottom: 16px;
-            font-size: 1.3em;
-        }
-        .departement ul {
-            padding-left: 16px;
-            margin: 0;
-        }
-        .departement li {
-            margin-bottom: 13px;
-            list-style: disc inside;
-        }
-        .departement a {
-            color: #f4e7cb;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .departement a:hover {
-            color: #ffd877;
-            text-decoration: underline;
-        }
-
-        /* Responsive Styles */
-        @media (max-width: 900px) {
-            .departments {
-                flex-direction: column;
-                align-items: center;
-                gap: 18px;
-            }
-            .departement {
-                width: 85%;
-                min-width: unset;
-            }
-            main {
-                padding: 18px 3vw 36px 3vw;
-            }
-        }
-        @media (max-width: 600px) {
-            .navbar {
-                flex-direction: column;
-                padding: 10px 5vw;
-                gap: 10px;
-            }
-            .navbar-title {
-                font-size: 1.2em;
-            }
-            .navbar-links {
-                flex-direction: column;
-                gap: 9px;
-                width: 100%;
-                align-items: flex-start;
-            }
-            main {
-                padding: 10px 1vw 20px 1vw;
-            }
-            h1 {
-                font-size: 1.3em;
-            }
-            .departement {
-                padding: 14px 7px;
-                width: 97%;
-            }
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Ombre pour le texte */
         }
     </style>
 </head>
@@ -154,12 +40,12 @@
     </nav>
 
     <main>
-        <h1>Nos différents départements</h1>
+        <h1 style="color:white">Nos différents départements</h1>
         <div class="departments">
             <section class="departement">
                 <h2>Informatique</h2>
                 <ul>
-                    <li><a href="informatique.html">Introduction à la programmation</a></li>
+                    <li><a href="Informatique.html">Introduction à la programmation</a></li>
                     <li><a href="Base de données.html">Base de données</a></li>
                 </ul>
             </section>
